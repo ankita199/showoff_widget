@@ -1,0 +1,13 @@
+<% @widgets.each do |widget| %>
+  <div class="card-deck mb-3 mr-3">
+    <div class="card border-dark">
+      <div class="card-header"><%= widget["name"] %></div>
+      <div class="card-body text-dark">                  
+        <p class="card-text"><%= widget["description"] %></p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted"><%= widget["user"]["name"] %></small>
+      </div>
+    </div>
+  </div>
+<% end %>
