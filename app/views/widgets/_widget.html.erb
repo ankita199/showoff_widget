@@ -1,0 +1,20 @@
+<div class="row">
+  <% @widgets.each do |widget| %>
+    <div class="col-sm-4">
+      <div class="card mb-4 border-dark">
+        <div class="card-header">
+          <%= widget["name"] %>
+          <% if widget["owner"] %>
+            <%#= link_to "Edit",edit_widget_path(widget["id"]),remote: true %>
+          <% end %>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><%= widget["description"] %></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"></b>Created By:</b> <%= widget["user"]["name"] %></small>
+        </div>
+      </div>
+    </div>
+  <% end unless @widgets.nil? %>
+</div>
