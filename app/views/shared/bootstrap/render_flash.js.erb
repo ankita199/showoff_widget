@@ -1,0 +1,5 @@
+$("[data-id='flash_messages']").html("<%= j render partial: 'shared/flash_messages' %>")
+var modal = $(".modal");
+if(modal.length > 0){
+	modal.modal("hide");
+}
