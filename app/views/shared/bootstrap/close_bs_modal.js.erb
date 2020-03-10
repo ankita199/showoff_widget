@@ -1,0 +1,7 @@
+<% if @page_reload %>
+	location.reload();
+<% else %>
+	<% model_id = @modal_id %>
+	var modal_selector = "div#"+"<%= model_id %>"+".modal";
+	$(modal_selector).modal("hide");
+<% end %>
